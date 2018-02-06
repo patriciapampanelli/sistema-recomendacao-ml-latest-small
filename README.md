@@ -29,9 +29,9 @@ O sistema de recomendação, como apresentado na imagem abaixo, tem como entrada
 ![Visão geral do sistema de recomendação](Overview_do_Problema.jpg)
 
 ### **Dataset**
+O dataset [ml-latest-small](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip) que será utilizado neste projeto foi obtido no site [Grouplens](https://grouplens.org/) mantido pelo Departamento de Ciência da Computação e Engenharia da Universidade de Minnesota, EUA.
 
-
-
+Este dataset é composto de informações obtidas no site [Movielens](https://movielens.org/) que tem como objetivo recomendar filmes para os usuários. Existem duas versões do dataset. A primeira delas é destinada a pesquisas acadêmicas e a segunda para desenvolvimento e ensino. Por uma questão de poder computacional, será utilizada a versão reduzida do dataset destinado à ensino. Este é composto de aproximadamente 100 mil ratings, 1300 tags, 9 mil filmes avaliados por 700 usuários.
 
 ### **Solução Proposta**
 
