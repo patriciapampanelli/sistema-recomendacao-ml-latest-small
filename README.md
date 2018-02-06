@@ -28,15 +28,67 @@ Existem duas abordagens principais para a construção de sistemas de recomenda�
 O sistema de recomendação, como apresentado na imagem abaixo, tem como entrada um identificador único do usuário para o qual serão feitas recomendações de novos filmes. Na segunda etapa é construída a solução de recomendação tendo como base as informações disponíveis no dataset. Estas informações podem ser sobre os filmes e/ou sobre os usuários. A solução pode seguir um dos três tipos de sistema de recomendação: filtragem colaborativa, sistemas baseados em conteúdo ou solução mista.   
 ![Visão geral do sistema de recomendação](Overview_do_Problema.jpg)
 
-### **Dataset**
+### **ML-Latest-Small - Dataset**
 O dataset [ml-latest-small](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip) que será utilizado neste projeto foi obtido no site [Grouplens](https://grouplens.org/) mantido pelo Departamento de Ciência da Computação e Engenharia da Universidade de Minnesota, EUA.
 
 Este dataset é composto de informações obtidas no site [Movielens](https://movielens.org/) que tem como objetivo recomendar filmes para os usuários. Existem duas versões do dataset. A primeira delas é destinada a pesquisas acadêmicas e a segunda para desenvolvimento e ensino. Por uma questão de poder computacional, será utilizada a versão reduzida do dataset destinado à ensino. Este é composto de aproximadamente 100 mil ratings, 1300 tags, 9 mil filmes avaliados por 700 usuários.
+
+#### **Dados Disponíveis**
+Para formular uma solução para o problema devemos analisar as infoormações disponíveis no dataset a partir do qual o sistema de recomendação será desenvolvido. O conjunto de dados disponíveis neste dataset estão organizados em 4 tabelas (.csv): links, movies, ratings, e tags. As features presentes em cada uma das tabelas são:
+
+- Filmes: movieId, title, genres;
+    - Total de 9125 filmes 
+    - Amostra dos dados:
+
+|   | movieId |                              title |                                      genres |
+|:-:|:-------:|-----------------------------------:|--------------------------------------------:|
+| 0 |    1    |                   Toy Story (1995) | Adventure|Animation|Children|Comedy|Fantasy |
+| 1 |    2    |                     Jumanji (1995) |                  Adventure|Children|Fantasy |
+| 2 |    3    |            Grumpier Old Men (1995) |                              Comedy|Romance |
+| 3 |    4    |           Waiting to Exhale (1995) |                        Comedy|Drama|Romance |
+| 4 |    5    | Father of the Bride Part II (1995) |                                      Comedy |
+
+- Ratings: userId, movieId, rating, timestamp;
+    - Total de 100.004 ratings 
+    - Amostra dos dados:
+
+|   | userId | movieId | rating | timestamp  |
+|:-:|:------:|:-------:|-------:|------------|
+| 0 |    1   |    31   |    2.5 | 1260759144 |
+| 1 |    1   |   1029  |    3.0 | 1260759179 |
+| 2 |    1   |   1061  |    3.0 | 1260759182 |
+| 3 |    1   |   1129  |    2.0 | 1260759185 |
+| 4 |    1   |   1172  |    4.0 | 1260759205 |
+
+- Tags: userId, movieId, tag, timestamp;
+    - Total de 1296 tags
+    - Amostras dos dados:
+
+|   | userId | movieId |                     tag | timestamp  |
+|:-:|:------:|:-------:|------------------------:|------------|
+| 0 |   15   |   339   | sandra 'boring' bullock | 1138537770 |
+| 1 |    1   |   1029  |                 dentist | 1193435061 |
+| 2 |   15   |   7478  |                Cambodia | 1170560997 |
+| 3 |   15   |  32892  |                 Russian | 1170626366 |
+| 4 |   15   |  34162  |             forgettable | 1141391765 |
+
+- Links: movieId, imdbId, tmdbId;
+    - Total de 9125 links
+    - Amostra dos dados:
+
+|   | movieId | imdbId |  tmdbId |
+|:-:|:-------:|:------:|--------:|
+| 0 |    1    | 114709 |   862.0 |
+| 1 |    2    | 113497 |  8844.0 |
+| 2 |    3    | 113228 | 15602.0 |
+| 3 |    4    | 114885 | 31357.0 |
+| 4 |    5    | 113041 | 11862.0 |
 
 ### **Solução Proposta**
 
 
 
+![Visão geral da solução proposta](Overview_Sistema_Recomendação.jpg)
 
 ### **Resultados**
 
