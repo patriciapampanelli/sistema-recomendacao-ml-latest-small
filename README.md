@@ -85,8 +85,7 @@ Para formular uma solução para o problema devemos analisar as infoormações d
 | 4 |    5    | 113041 | 11862.0 |
 
 ### **Solução Proposta**
-
-
+A solução proposta para este projeto leva em consideração as informações disponíveis no dataset, como apresentado na seção anterior. 
 
 ![Visão geral da solução proposta](Overview_Sistema_Recomendação.jpg)
 
