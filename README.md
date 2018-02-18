@@ -93,17 +93,35 @@ O método proposto para o sistema de recomendação de filmes consiste em 4 etap
 
 A primeira etapa da solução, chamada de "Avaliação do usuário", consiste em processar a lista de filmes que o usuário já assistiu e avaliou. Esta lista representa um bom indicativo do perfil de filmes que estão dentro das preferências do usuário. Dentre os filmes avaliados, podemos inferir também aqueles estilo que o usuário não gosta, representados pelos ratings mais baixos dados por este usuário.
 
-A segunda etapa consiste em avaliar a lista de filmes obtida na primeira etapa, extraindo as categorias que foram mais bem avaliadas. Além disto, é medida a correlação entre as categorias. As categorias com alta correlação, como por exemplo Animações e Infantis, são levadas em consideração também. Esta solução tem como foco as categorias dos filmes e suas correlações. A saída desta segunda etapa corresponde a uma lista de categorias que repreesentam o perfil do usuário.
+A segunda etapa consiste em avaliar a lista de filmes obtida na primeira etapa, extraindo as categorias que foram mais bem avaliadas. Além disto, é medida a correlação entre as categorias. As categorias com alta correlação são levadas em consideração também. Esta solução tem como foco as categorias dos filmes e suas correlações. A saída desta segunda etapa corresponde a uma lista de categorias que repreesentam o perfil do usuário. Vale ressaltar que as correlações entre as categorias devem ser medidas e validadas.
 
 Na terceira etapa são obtidos os filmes que pertencem a estas categorias. São removidos os filmes que já foram assistidos pelo usuário. A justificativa principal para conduzir a busca deste filmes com base nas categorias é que os usuários tendem a gostar de filmes de uma mesmo estilo. Em outras palavras, os usuários tendem a gostar de filmes correlatos.
 
 Na última etapa, para cada um dos filmes obtidos na etapa anterior, é utilizado um método de inferência de ratings. O modelo utilizado para a inferência é treinado utilizando os ratings, filmes e usuários pertencentes ao dataset. Tendo como base os ratings inferidos para o usuário, são selecionados aqueles filmes com a maior pontuação. Por fim, estes filmes são então sugeridos para o usuário de entrada.
 
-### **Resultados**
+#### **Métricas**
+
+O método proposto será avaliado com base no modelo treinado para inferência de ratings, como apresentado na seção anterior. As métricas utilizadas serão:
+
+    - Root-mean-square error (RMSE):
+
+$$RMSE = \sqrt{\frac{1}{n}\sum^{n}_{j=1}(y_j - {y^*}_j)^2}$$
+onde:
+número de elementos: $$n$$
+valor observado: $$y_j$$
+valor estimado: $${y^*}_j$$
+
+    - Mean Absolute Error (MAE):
+
+$$MAE = \frac{1}{n} \sum^{n}_{j=1} \left | (y_j - {y^*}_j \right |$$
+onde:
+- número de elementos: $$n$$
+- valor observado: $$y_j$$
+- valor estimado: $${y^*}_j$$
+
+[comment]: <> (### **Resultados**)
 
 
-
-
-### **Conclusões**
+[comment]: <> (### **Conclusões**)
 
 
