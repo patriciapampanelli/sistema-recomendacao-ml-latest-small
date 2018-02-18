@@ -85,9 +85,19 @@ Para formular uma solução para o problema devemos analisar as infoormações d
 | 4 |    5    | 113041 | 11862.0 |
 
 ### **Solução Proposta**
-A solução proposta para este projeto leva em consideração as informações disponíveis no dataset, como apresentado na seção anterior. 
+A solução proposta para este projeto leva em consideração as informações disponíveis no dataset [ml-latest-small](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip), como apresentado na seção anterior.
+
+O método proposto para o sistema de recomendação de filmes consiste em 4 etapas que compreendem desde a análise dos filmes assistidos pelo usuário até a saída com uma lista de filmes recomendados. A figura a seguir apresenta uma visão geral da solução.
 
 ![Visão geral da solução proposta](Overview_Sistema_Recomendação.jpg)
+
+A primeira etapa da solução, chamada de "Avaliação do usuário", consiste em processar a lista de filmes que o usuário já assistiu e avaliou. Esta lista representa um bom indicativo do perfil de filmes que estão dentro das preferências do usuário. Dentre os filmes avaliados, podemos inferir também aqueles estilo que o usuário não gosta, representados pelos ratings mais baixos dados por este usuário.
+
+A segunda etapa consiste em avaliar a lista de filmes obtida na primeira etapa, extraindo as categorias que foram mais bem avaliadas. Além disto, é medida a correlação entre as categorias. As categorias com alta correlação, como por exemplo Animações e Infantis, são levadas em consideração também. Esta solução tem como foco as categorias dos filmes e suas correlações. A saída desta segunda etapa corresponde a uma lista de categorias que repreesentam o perfil do usuário.
+
+Na terceira etapa são obtidos os filmes que pertencem a estas categorias. São removidos os filmes que já foram assistidos pelo usuário. A justificativa principal para conduzir a busca deste filmes com base nas categorias é que os usuários tendem a gostar de filmes de uma mesmo estilo. Em outras palavras, os usuários tendem a gostar de filmes correlatos.
+
+Na última etapa, para cada um dos filmes obtidos na etapa anterior, é utilizado um método de inferência de ratings. O modelo utilizado para a inferência é treinado utilizando os ratings, filmes e usuários pertencentes ao dataset. Tendo como base os ratings inferidos para o usuário, são selecionados aqueles filmes com a maior pontuação. Por fim, estes filmes são então sugeridos para o usuário de entrada.
 
 ### **Resultados**
 
