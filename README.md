@@ -26,7 +26,7 @@ O problema que será abordado neste projeto é a recomendação de filmes, ou se
 Existem duas abordagens principais para a construção de sistemas de recomendação, como descrito na seção anterior. O primeiro tipo, chamado de filtragem colaborativa, demanda o uso de informações provenientes dos usuários. Desta forma, espera-se analisar informações comportamentais dos usuários como os filmes já assistidos, ratings dados pelo usuários e outras informações que permitam analisar similaridade entre os usuários. Já os sistemas de recomendação com base no conteúdo tem como objetivo analisar as caractarísticas dos filmes como, por exemplo, categorias, tags, diretores, elenco, relação entre as categorias e etc. Desta forma, como descrito anteriormente, o foco deste segundo tipo de abordagem está no conhecimento do filme que será recomendado. Uma terceira abordagem pode ainda combinar características das duas abordagens anteriores tendo uma solução mista. 
 
 O sistema de recomendação, como apresentado na imagem abaixo, tem como entrada um identificador único do usuário para o qual serão feitas recomendações de novos filmes. Na segunda etapa é construída a solução de recomendação tendo como base as informações disponíveis no dataset. Estas informações podem ser sobre os filmes e/ou sobre os usuários. A solução pode seguir um dos três tipos de sistema de recomendação: filtragem colaborativa, sistemas baseados em conteúdo ou solução mista.   
-![Visão geral do sistema de recomendação](Overview_do_Problema.jpg)
+![Visão geral do sistema de recomendação](images/Overview_do_Problema.jpg)
 
 ### **ML-Latest-Small - Dataset**
 O dataset [ml-latest-small](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip) que será utilizado neste projeto foi obtido no site [Grouplens](https://grouplens.org/) mantido pelo Departamento de Ciência da Computação e Engenharia da Universidade de Minnesota, EUA.
@@ -89,7 +89,7 @@ A solução proposta para este projeto leva em consideração as informações d
 
 O método proposto para o sistema de recomendação de filmes consiste em 4 etapas que compreendem desde a análise dos filmes assistidos pelo usuário até a saída com uma lista de filmes recomendados. A figura a seguir apresenta uma visão geral da solução.
 
-![Visão geral da solução proposta](Overview_Sistema_Recomendação.jpg)
+![Visão geral da solução proposta](images/Overview_Sistema_Recomendação.jpg)
 
 A primeira etapa da solução, chamada de "Avaliação do usuário", consiste em processar a lista de filmes que o usuário já assistiu e avaliou. Esta lista representa um bom indicativo do perfil de filmes que estão dentro das preferências do usuário. Dentre os filmes avaliados, podemos inferir também aqueles estilo que o usuário não gosta, representados pelos ratings mais baixos dados por este usuário.
 
