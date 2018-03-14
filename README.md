@@ -119,9 +119,18 @@ onde:
 - valor observado: $$y_j$$
 - valor estimado: $${y^*}_j$$
 
+#### **Benchmarks**
+
+A avaliação do método proposto é fundamental para verificar quão boas estão sendo feitas as recomendações dos filmes. Existem diversos benchmarks que podem ser utilizados para essa finalidade:
+
+##### **[Surprise Scikit](https://pypi.python.org/pypi/scikit-surprise)**
+
+
+
+##### **[My Media Lite](http://mymedialite.net/examples/datasets.html)**
+
+
 [comment]: <> (### **Resultados**)
 
 
 [comment]: <> (### **Conclusões**)
-
-
