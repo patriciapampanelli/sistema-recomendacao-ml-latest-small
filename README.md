@@ -129,8 +129,3 @@ A avaliação do método proposto é fundamental para verificar quão boas estã
 
 ##### **[My Media Lite](http://mymedialite.net/examples/datasets.html)**
 
-
-[comment]: <> (### **Resultados**)
-
-
-[comment]: <> (### **Conclusões**)
