@@ -10,7 +10,7 @@ cffi==1.11.4
 chardet==3.0.4
 cloudpickle==0.5.2
 conda==4.4.10
-cryptography==2.1.4
+cryptography==3.2
 cycler==0.10.0
 Cython==0.28.2
 dask==0.17.4
