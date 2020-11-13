@@ -57,7 +57,7 @@ six==1.10.0
 sklearn==0.0
 surprise==0.1
 sympy==1.0
-tensorflow-gpu==1.0.0
+tensorflow-gpu==2.3.1
 terminado==0.6
 testpath==0.3
 Theano==0.8.2
